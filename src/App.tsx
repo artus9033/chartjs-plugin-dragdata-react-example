@@ -1,11 +1,10 @@
+import "chartjs-plugin-dragdata";
+import "chart.js/auto";
+
 import "./App.css";
 
-import Chart from "chart.js/auto";
-import ChartJSDragDataPlugin from "chartjs-plugin-dragdata";
 import React from "react";
 import { Line } from "react-chartjs-2";
-
-Chart.register(ChartJSDragDataPlugin);
 
 function App() {
   return (
@@ -15,6 +14,7 @@ function App() {
           data={{
             datasets: [
               {
+                dragData: false,
                 data: [
                   {
                     x: 1,
